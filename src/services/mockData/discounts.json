@@ -1,0 +1,52 @@
+[
+  {
+    "Id": 1,
+    "title": "Office Supplies Bundle",
+    "description": "Save 25% on premium office supplies including notebooks, pens, and organizers",
+    "code": "OFFICE25",
+    "discount": "25% off",
+    "expiryDate": "2024-03-31",
+    "category": "Office",
+    "url": "https://officesupplies.com/bundle"
+  },
+  {
+    "Id": 2,
+    "title": "Business Software Suite",
+    "description": "Get 40% off the complete productivity software package for teams",
+    "code": "BIZSOFT40",
+    "discount": "40% off",
+    "expiryDate": "2024-02-28",
+    "category": "Software",
+    "url": "https://bizsoftware.com/team-package"
+  },
+  {
+    "Id": 3,
+    "title": "Professional Training Course",
+    "description": "Exclusive 30% discount on project management certification course",
+    "code": "TRAIN30",
+    "discount": "30% off",
+    "expiryDate": "2024-04-15",
+    "category": "Training",
+    "url": "https://training.com/pm-certification"
+  },
+  {
+    "Id": 4,
+    "title": "Cloud Storage Premium",
+    "description": "50% off first year of premium cloud storage for business files",
+    "code": "CLOUD50",
+    "discount": "50% off",
+    "expiryDate": "2024-03-15",
+    "category": "Software",
+    "url": "https://cloudstorage.com/business"
+  },
+  {
+    "Id": 5,
+    "title": "Ergonomic Office Chair",
+    "description": "Save $200 on premium ergonomic office chairs for better workplace comfort",
+    "code": "CHAIR200",
+    "discount": "$200 off",
+    "expiryDate": "2024-02-20",
+    "category": "Furniture",
+    "url": "https://furniture.com/ergonomic-chairs"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "Id": 1,
+    "name": "Sarah Johnson",
+    "email": "sarah.johnson@company.com",
+    "phone": "+1 (555) 123-4567",
+    "role": "Product Manager",
+    "department": "Product",
+    "addedAt": "2024-01-15T08:30:00Z"
+  },
+  {
+    "Id": 2,
+    "name": "Michael Chen",
+    "email": "m.chen@company.com",
+    "phone": "+1 (555) 234-5678",
+    "role": "Senior Developer",
+    "department": "Engineering",
+    "addedAt": "2024-01-18T10:15:00Z"
+  },
+  {
+    "Id": 3,
+    "name": "Emily Rodriguez",
+    "email": "emily.r@company.com",
+    "phone": "+1 (555) 345-6789",
+    "role": "UX Designer",
+    "department": "Design",
+    "addedAt": "2024-01-20T14:45:00Z"
+  },
+  {
+    "Id": 4,
+    "name": "James Wilson",
+    "email": "james.wilson@company.com",
+    "phone": "+1 (555) 456-7890",
+    "role": "Sales Director",
+    "department": "Sales",
+    "addedAt": "2024-01-22T09:20:00Z"
+  },
+  {
+    "Id": 5,
+    "name": "Lisa Thompson",
+    "email": "lisa.t@company.com",
+    "phone": "+1 (555) 567-8901",
+    "role": "Marketing Specialist",
+    "department": "Marketing",
+    "addedAt": "2024-01-25T13:10:00Z"
+  }
+]

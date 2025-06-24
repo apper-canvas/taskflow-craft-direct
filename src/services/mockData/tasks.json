@@ -1,0 +1,47 @@
+[
+  {
+    "Id": 1,
+    "title": "Complete quarterly budget report",
+    "description": "Compile and analyze Q3 financial data for presentation to the board",
+    "dueDate": "2024-02-15",
+    "priority": "high",
+    "status": "active",
+    "createdAt": "2024-01-20T10:30:00Z"
+  },
+  {
+    "Id": 2,
+    "title": "Review client project proposals",
+    "description": "Evaluate three new project proposals from potential clients and provide feedback",
+    "dueDate": "2024-02-10",
+    "priority": "medium",
+    "status": "active",
+    "createdAt": "2024-01-22T14:15:00Z"
+  },
+  {
+    "Id": 3,
+    "title": "Team meeting preparation",
+    "description": "Prepare agenda and materials for weekly team standup meeting",
+    "dueDate": "2024-02-08",
+    "priority": "low",
+    "status": "completed",
+    "createdAt": "2024-01-25T09:00:00Z"
+  },
+  {
+    "Id": 4,
+    "title": "Update project documentation",
+    "description": "Revise technical documentation for the new product features",
+    "dueDate": "2024-02-12",
+    "priority": "medium",
+    "status": "active",
+    "createdAt": "2024-01-28T16:45:00Z"
+  },
+  {
+    "Id": 5,
+    "title": "Client presentation slides",
+    "description": "Create presentation deck for upcoming client demo on Friday",
+    "dueDate": "2024-02-09",
+    "priority": "high",
+    "status": "active",
+    "createdAt": "2024-01-30T11:20:00Z"
+  }
+]
