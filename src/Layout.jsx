@@ -1,14 +1,25 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Outlet, NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 import ApperIcon from '@/components/ApperIcon';
+import Button from '@/components/atoms/Button';
 import { routeArray } from '@/config/routes';
+import { AuthContext } from './App';
 
 const Layout = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { logout } = useContext(AuthContext);
+  const { user, isAuthenticated } = useSelector((state) => state.user);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const handleLogout = async () => {
+    if (window.confirm('Are you sure you want to logout?')) {
+      await logout();
+    }
   };
 
   return (
@@ -28,24 +39,44 @@ const Layout = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
-              {routeArray.map((route) => (
-                <NavLink
-                  key={route.id}
-                  to={route.path}
-                  className={({ isActive }) =>
-                    `flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200 ${
-                      isActive
-                        ? 'bg-primary text-white shadow-sm'
-                        : 'text-surface-600 hover:text-surface-900 hover:bg-surface-50'
-                    }`
-                  }
-                >
-                  <ApperIcon name={route.icon} className="w-5 h-5" />
-                  <span className="font-medium">{route.label}</span>
-                </NavLink>
-              ))}
-            </nav>
+            <div className="hidden md:flex items-center space-x-8">
+              <nav className="flex space-x-8">
+                {routeArray.map((route) => (
+                  <NavLink
+                    key={route.id}
+                    to={route.path}
+                    className={({ isActive }) =>
+                      `flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200 ${
+                        isActive
+                          ? 'bg-primary text-white shadow-sm'
+                          : 'text-surface-600 hover:text-surface-900 hover:bg-surface-50'
+                      }`
+                    }
+                  >
+                    <ApperIcon name={route.icon} className="w-5 h-5" />
+                    <span className="font-medium">{route.label}</span>
+                  </NavLink>
+                ))}
+              </nav>
+              
+              {/* User Info & Logout */}
+              {isAuthenticated && (
+                <div className="flex items-center space-x-3 pl-4 border-l border-surface-200">
+                  <div className="text-sm text-surface-600">
+                    Welcome, {user?.firstName || 'User'}
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    icon="LogOut"
+                    onClick={handleLogout}
+                    className="text-surface-600 hover:text-error"
+                  >
+                    Logout
+                  </Button>
+                </div>
+              )}
+            </div>
 
             {/* Mobile Menu Button */}
             <button
@@ -83,6 +114,22 @@ const Layout = () => {
                   <span className="font-medium">{route.label}</span>
                 </NavLink>
               ))}
+              
+              {/* Mobile Logout */}
+              {isAuthenticated && (
+                <div className="pt-2 border-t border-surface-200">
+                  <div className="px-4 py-2 text-sm text-surface-600">
+                    Welcome, {user?.firstName || 'User'}
+                  </div>
+                  <button
+                    onClick={handleLogout}
+                    className="flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 text-surface-600 hover:text-error hover:bg-surface-50 w-full"
+                  >
+                    <ApperIcon name="LogOut" className="w-5 h-5" />
+                    <span className="font-medium">Logout</span>
+                  </button>
+                </div>
+              )}
             </nav>
           </motion.div>
         )}
